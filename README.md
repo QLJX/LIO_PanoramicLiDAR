@@ -86,7 +86,3 @@ We thank the authors of LIO-SAM, FAST-LIO, FASTER-LIO, POINT-LIO, IG-LIO and D-L
 ---
 
 **Maintainer:** Wenzhe Yang (ywz@mail.dlut.edu.cn)
-
-
-
-
