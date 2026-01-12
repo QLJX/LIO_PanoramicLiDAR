@@ -1,9 +1,8 @@
-# LiDAR-Inertial Odometry for Self-built Panoramic LiDAR
-## with Dynamic Re-Initialization and Enhanced Point-Plane Matching
+# LiDAR-Inertial Odometry for Self-built Panoramic LiDAR With Dynamic Re-Initialization and Enhanced Point-Plane Matching
 
-**[Work in Progress]** This repository contains the implementation of the LIO framework tailored for our **custom-developed panoramic LiDAR system**.
+**[Work in Progress]** This repository contains the implementation of the LIO framework tailored for our **self-built panoramic LiDAR system**.
 
-> **📢 NOTICE:** The source code and datasets will be made publicly available upon the acceptance of our paper in **IEEE Transactions on Instrumentation and Measurement (IEEE TIM)**.
+> **📢 NOTICE:** The source code will be made publicly available upon the acceptance of our paper.
 >
 > If you are a reviewer, thank you for your time and interest!
 
@@ -31,15 +30,15 @@ To address these challenges, our system features:
 - **Robust Initialization:**
     - LMI-constrained gyroscope bias calibration.
     - Linear alignment for gravity and velocity estimation under high-speed rotation.
-- **Accuracy:** Outperforms SOTA methods (FAST-LIO2, LIO-SAM, etc.) in aggressive motion and unstructured environments.
+- **Accuracy:** Outperforms SOTA methods (FAST-LIO2, POINT-LIO, etc.) in aggressive motion and unstructured environments.
 - **Versatility:** Validated on **Handheld**, **UGV**, and **UAV** platforms.
 
 
 ### 3. Build & Run (Coming Soon)
 
 #### Prerequisites
-* Ubuntu 20.04 / 18.04
-* ROS Noetic / Melodic
+* Ubuntu 20.04
+* ROS Noetic
 * PCL >= 1.8
 * Eigen >= 3.3.4
 
