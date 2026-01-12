@@ -35,13 +35,6 @@ To address these challenges, our system features:
 ### 2. Key Features
 
 - **Hardware Adaptation:** Tightly coupled LIO tailored for self-built panoramic LiDAR (coupling of motor rotation and platform motion).
-- **Robust Dynamic Re-initialization:**
-    - LMI-constrained gyroscope bias calibration.
-    - Linear alignment for gravity and velocity estimation under high-speed rotation.
-- **Accuracy:** Outperforms SOTA methods (FAST-LIO2, POINT-LIO, etc.) in aggressive motion and unstructured environments.
-- **Versatility:** Validated on **Handheld**, **UGV**, and **UAV** platforms.
-
-- **Hardware Adaptation:** Tightly coupled LIO tailored for self-built panoramic LiDAR (coupling of motor rotation and platform motion).
 - **Dynamic Re-initialization:**
     - LMI-constrained gyroscope bias calibration.
     - Linear alignment for gravity and velocity estimation under high-speed rotation.
@@ -73,3 +66,36 @@ git clone [https://github.com/YourUsername/RepoName.git](https://github.com/Your
 cd ..
 catkin_make
 source devel/setup.bash
+
+### 4. Experimental Results
+
+[cite_start]We evaluated our framework on the **DUT-Panoramic** dataset against state-of-the-art LIO systems, including **LIO-SAM**, **FAST-LIO**, **FASTER-LIO**, **POINT-LIO**, and **IG-LIO**.
+
+**Quantitative Comparison (RMSE in meters):**
+
+Our method demonstrates superior accuracy, especially in sequences with aggressive rotation and low overlap (e.g., *Indoor_4*, *Outdoor_1*), where other methods suffer from significant drift or tracking failure ("X").
+
+| Sequence | LIO-SAM | FAST-LIO | FASTER-LIO | POINT-LIO | IG-LIO | **Ours** |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Indoor_4** (Stairs) | 1.090 | 1.519 | 0.626 | 0.860 | 0.646 | **0.243** |
+| **Indoor_6** (Agile) | 0.938 | X | 2.508 | 2.211 | 3.505 | **0.412** |
+| **Outdoor_1** (Long) | 0.968 | X | 9.716 | 3.987 | 5.624 | **0.630** |
+| **Outdoor_2** (Rough) | 0.953 | X | X | X | X | **0.127** |
+
+> **Note:** "X" indicates the algorithm failed to complete the sequence.
+
+**Dynamic Re-Initialization Performance:**
+[cite_start]We also compared our re-initialization module with **D-LI-Init**[cite: 311]. As shown in the paper (Fig. 7 & 8), our method achieves faster convergence and lower estimation errors for velocity, gravity, and IMU biases under continuous rotation speeds up to 180°/s.
+
+### 5. Acknowledgements
+
+We sincerely appreciate the authors of the following open-source projects for their excellent contributions to the community. Our work is built upon or compared against these state-of-the-art methods:
+
+* **[LIO-SAM](https://github.com/TixiaoShan/LIO-SAM)** (T. Shan et al.)
+* **[FAST-LIO](https://github.com/hku-mars/FAST_LIO)** (W. Xu et al.)
+* **[FASTER-LIO](https://github.com/gaoxiang12/faster-lio)** (C. Bai et al.)
+* **[POINT-LIO](https://github.com/hku-mars/Point-LIO)** (D. He et al.)
+* **[IG-LIO](https://github.com/Nanyang-Technological-University/IG-LIO)** (Z. Chen et al.)
+* **[D-LI-Init](https://github.com/hku-mars/LiDAR_IMU_Init)** (Comparison Baseline for Re-initialization)
+
+---
