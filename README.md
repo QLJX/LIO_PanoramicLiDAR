@@ -16,13 +16,14 @@ To address these challenges, our system features:
 * **Dynamic Re-Initialization:** Capable of recovering from tracking failures *on-the-fly* while the LiDAR is continuously rotating, without requiring a static phase.
 * **Enhanced Point-Plane Matching (EPPM):** Exploits historical planar information via a sliding window manager to supplement local constraints in low-overlap scenarios.
 
-<p align="center">
-  <img src="doc/hardware_setup.png" width="45%" />
-  <img src="doc/pipeline.png" width="50%" />
-</p>
-<p align="center">
-    <em>Left: Our self-built handheld panoramic LiDAR. Right: The proposed system framework.</em>
-</p>
+<div align="center">
+    <img src="doc/fig1_handheld_platform.png" width="90%" />
+    <p><strong>Fig. 1.</strong> Handheld platform. (a) Self-built panoramic LiDAR system with an ultra-wide field of view (360° × 270°). (b) Schematic diagram of the spiral scanning trajectory induced by the coupling of LiDAR rotation and platform motion, resulting in extremely limited FOV overlap between consecutive frames.</p>
+    <br>
+    
+    <img src="doc/fig2_framework.png" width="100%" />
+    <p><strong>Fig. 2.</strong> Overview of the proposed framework, which consists of four parallel threads: data processing thread in yellow, dynamic re-initialization thread in red, enhanced point-plane matching thread in green, and optimization thread in blue.</p>
+</div>
 
 ### 2. Key Features
 
