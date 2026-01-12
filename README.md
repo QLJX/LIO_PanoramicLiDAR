@@ -41,6 +41,12 @@ To address these challenges, our system features:
 - **Accuracy:** Outperforms SOTA methods (FAST-LIO2, POINT-LIO, etc.) in aggressive motion and unstructured environments.
 - **Versatility:** Validated on **Handheld**, **UGV**, and **UAV** platforms.
 
+<p align="center">
+  <img src="doc/platforms.png" width="90%" />
+</p>
+<p align="center">
+    <em>Fig. 3. Experimental platforms used for evaluation.</em>
+</p>
 
 ### 3. Build & Run (Coming Soon)
 
