@@ -34,11 +34,21 @@ To address these challenges, our system features:
 
 ### 2. Key Features
 
-- **Hardware Adaptation:** Tightly coupled LIO tailored for spinning LiDAR kinematics (coupling of motor rotation and platform motion).
-- **Robust Initialization:**
+- **Hardware Adaptation:** Tightly coupled LIO tailored for self-built panoramic LiDAR (coupling of motor rotation and platform motion).
+- **Robust Dynamic Re-initialization:**
     - LMI-constrained gyroscope bias calibration.
     - Linear alignment for gravity and velocity estimation under high-speed rotation.
 - **Accuracy:** Outperforms SOTA methods (FAST-LIO2, POINT-LIO, etc.) in aggressive motion and unstructured environments.
+- **Versatility:** Validated on **Handheld**, **UGV**, and **UAV** platforms.
+
+- **Hardware Adaptation:** Tightly coupled LIO tailored for self-built panoramic LiDAR (coupling of motor rotation and platform motion).
+- **Dynamic Re-initialization:**
+    - LMI-constrained gyroscope bias calibration.
+    - Linear alignment for gravity and velocity estimation under high-speed rotation.
+- **Enhanced Point-Plane Matching (EPPM):**
+    - **Sliding Window Manager:** Propagates historical planar structures into currently unobserved regions to address the low inter-frame overlap.
+    - **Two-Stage Matching:** fuses point-map constraints with point-window constraints to ensure tracking stability in narrow or degenerate environments.
+- **Accuracy:** Outperforms SOTA methods (FAST-LIO2, iG-LIO, etc.) in aggressive motion and unstructured environments.
 - **Versatility:** Validated on **Handheld**, **UGV**, and **UAV** platforms.
 
 <p align="center">
