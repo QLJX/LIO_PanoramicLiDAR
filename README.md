@@ -72,13 +72,16 @@ source devel/setup.bash
 
 ### 4. Experimental Results
 
-We evaluated our framework on the **DUT-Panoramic** dataset against state-of-the-art LIO systems, including **LIO-SAM**, **FAST-LIO**, **FASTER-LIO**, **POINT-LIO**, and **IG-LIO**.
+We evaluated our framework on the **DUT-Indoor** dataset and the **DUT-Outdoor** dataset against state-of-the-art LIO systems, including **LIO-SAM**, **FAST-LIO**, **FASTER-LIO**, **POINT-LIO**, and **IG-LIO**.
+
+**In addition, we conducted a detailed comparative study between our Dynamic Re-initialization module and the D-LI-Init method.** The results demonstrate that our method achieves superior stability and accuracy in estimating system states (velocity, gravity, IMU biases) under continuous rotation.
 
 The proposed method demonstrates superior accuracy and robustness, especially in sequences with aggressive rotation and low overlap. **Detailed qualitative and quantitative comparisons, along with ablation studies, are presented in the paper.**
 
+
 ### 5. Acknowledgements
 
-We thank the authors of FAST-LIO, LIO-SAM, and LMI-Vins for their open-source contributions.
+We thank the authors of LIO-SAM, FAST-LIO, FASTER-LIO, POINT-LIO, IG-LIO and D-LI-Init for their open-source contributions.
 
 ---
 
